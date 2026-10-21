@@ -1,16 +1,24 @@
-### Embedded Systems and IoT  - ISI LT - a.y. 2025/2026
+# Assignment #01 - *React!* 
 
-## Assignment #01 - *React!* 
-
-v. 1.0.0-20261006
+> v. 1.0.0-20261006
  
 We want to realise an embedded system implementing a game called *React!*. 
+
+## Circuit link: 
+To simulate the circuit we use Tinkercad, the project is unlisted, so it can be accessed by this link: https://www.tinkercad.com/things/1R9SyeoLojW-elaborato-1-iot?sharecode=zh4vgw3yRN-hM0C9bcffDPcfxGkN2vI3MPerARctUQk
+
+
+## Teacher Assignment
+
+### Original Repository
+
+https://github.com/pslab-unibo/esiot-2026-2027
 
 ### Description 
 
 The game board includes two green leds (L1, L3), two red leds (L2, L4), two tactile buttons B1, B2, a potentiometer Pot, and an LCD. This is the suggested  layout:
 
-![layout](assignment-01-sketch.png)
+![layout](doc/imgs/assignment-01-sketch.png)
 
 *React!* is a two players game. Each player uses a button: player #1 button B1, player #2 button #2. A game proceeds by rounds. At each round, the system  displays on the LCD - at a random time - a integer number N between 1 and 3 (i.e., either 1 or 2 or 3). Each player must react as fast as possible, pressing her/his button N times. For instance: if N is 2, then players must press 2 times their buttons.  The player who does it first wins the round. In that case, a green led (L1 for player #1, L4 for player #2) is turned on for 2 seconds, and she/he gets a point, increasing her/his score by 1. If a player presses the button before the number N is displayed, the red led is turned on for 2 seconds and her/his score is decreased by 1. This penalty occurs also if a player presses her/his button more times than N. If no players reacts within some timeout T1 (a parameter of the program), then both red leds are turned on for 2 seconds, and the game ends (game over). At each round, the time T1 is reduced of some factor F. The game goes on round after round, until game over.  At game over, the player with the highest score wins (but tie case).  
 
